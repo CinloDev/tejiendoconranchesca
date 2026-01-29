@@ -1,5 +1,6 @@
 import './globals.css'
 import type { ReactNode } from 'react'
+import LayoutShell from '../components/LayoutShell'
 
 export const metadata = {
   title: 'Tejiendo con Ranchesca',
@@ -10,13 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body>
-        <header className="border-b py-4">
-          <div className="container mx-auto px-4">Tejiendo con Ranchesca</div>
-        </header>
-        <main className="container mx-auto px-4 py-8">{children}</main>
-        <footer className="border-t py-6 mt-12">
-          <div className="container mx-auto px-4 text-sm">© Ranchesca</div>
-        </footer>
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   )

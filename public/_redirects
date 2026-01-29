@@ -1,0 +1,1 @@
+/go/*  /.netlify/functions/redirect?slug=:splat  200

@@ -2,6 +2,17 @@
   command = "npm run build"
   publish = ".next"
 
+[dev]
+  command = "npm run dev"
+
+[[redirects]]
+  from = "/go/*"
+  to = "/go/:splat"
+  status = 200
+[build]
+  command = "npm run build"
+  publish = ".next"
+
 [[redirects]]
   from = "/go/*"
   to = "/go/:splat"
