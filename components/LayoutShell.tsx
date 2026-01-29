@@ -14,17 +14,22 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
         <Container>
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center gap-4">
-              <Link href="/" className="text-rose-600 font-semibold text-lg">Tejiendo con Ranchesca</Link>
-              <span className="text-sm text-gray-500 hidden sm:inline">Patrones, packs y recomendaciones</span>
+              <Link href="/" className="flex items-center gap-3">
+                <img src="/assets/logo.png" alt="Tejiendo con Ranchesca" className="h-14 w-auto" />
+                <div className="flex flex-col leading-none">
+                  <span className="text-brand font-bold text-lg">Tejiendo con Ranchesca</span>
+                  <span className="text-sm text-gray-500 hidden sm:block">Patrones, packs y recomendaciones</span>
+                </div>
+              </Link>
             </div>
 
             <nav aria-label="Principal" className="hidden sm:block">
               <ul className="flex items-center gap-4">
-                <li><Link href="/" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Inicio</Link></li>
-                <li><Link href="/blog" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Blog</Link></li>
-                <li><Link href="/patrones" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Patrones</Link></li>
-                <li><Link href="/packs" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Packs</Link></li>
-                <li><Link href="/recomendados" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Recomendados</Link></li>
+                <li><Link href="/" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Inicio</Link></li>
+                <li><Link href="/blog" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Blog</Link></li>
+                <li><Link href="/patrones" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Patrones</Link></li>
+                <li><Link href="/packs" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Packs</Link></li>
+                <li><Link href="/recomendados" className="px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Recomendados</Link></li>
               </ul>
             </nav>
 
@@ -33,7 +38,7 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
                 aria-controls="mobile-menu"
                 aria-expanded={open}
                 onClick={() => setOpen(!open)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-rose-300"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-light"
               >
                 <span className="sr-only">Abrir menú</span>
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
@@ -52,22 +57,22 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
           <div id="mobile-menu" className="sm:hidden border-t">
             <Container>
               <ul className="flex flex-col py-3">
-                <li className="py-1"><Link href="/" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Inicio</Link></li>
-                <li className="py-1"><Link href="/blog" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Blog</Link></li>
-                <li className="py-1"><Link href="/patrones" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Patrones</Link></li>
-                <li className="py-1"><Link href="/packs" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Packs</Link></li>
-                <li className="py-1"><Link href="/recomendados" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300">Recomendados</Link></li>
+                <li className="py-1"><Link href="/" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Inicio</Link></li>
+                <li className="py-1"><Link href="/blog" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Blog</Link></li>
+                <li className="py-1"><Link href="/patrones" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Patrones</Link></li>
+                <li className="py-1"><Link href="/packs" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Packs</Link></li>
+                <li className="py-1"><Link href="/recomendados" className="block px-2 py-2 rounded focus:outline-none focus:ring-2 focus:ring-brand-light font-medium">Recomendados</Link></li>
               </ul>
             </Container>
           </div>
         )}
       </header>
 
-      <main id="main" className="flex-1">
+      <main id="main" className="flex-1 site-section">
         {children}
       </main>
 
-      <footer className="bg-gray-50 border-t mt-12">
+      <footer className="bg-brand-light border-t mt-12 border-brand-light">
         <Container>
           <div className="py-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div>
@@ -78,18 +83,18 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
             <div>
               <h5 className="font-medium">Navegación</h5>
               <ul className="mt-2 text-sm text-gray-700 space-y-1">
-                <li><Link href="/blog" className="hover:underline">Blog</Link></li>
-                <li><Link href="/patrones" className="hover:underline">Patrones</Link></li>
-                <li><Link href="/packs" className="hover:underline">Packs</Link></li>
-                <li><Link href="/recomendados" className="hover:underline">Recomendados</Link></li>
+                <li><Link href="/blog" className="hover:no-underline hover:text-brand-dark">Blog</Link></li>
+                <li><Link href="/patrones" className="hover:no-underline hover:text-brand-dark">Patrones</Link></li>
+                <li><Link href="/packs" className="hover:no-underline hover:text-brand-dark">Packs</Link></li>
+                <li><Link href="/recomendados" className="hover:no-underline hover:text-brand-dark">Recomendados</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-medium">Legal</h5>
               <ul className="mt-2 text-sm text-gray-700 space-y-1">
-                <li><Link href="/transparencia" className="hover:underline">Transparencia</Link></li>
-                <li><Link href="/contacto" className="hover:underline">Contacto</Link></li>
+                <li><Link href="/transparencia" className="hover:no-underline hover:text-brand-dark">Transparencia</Link></li>
+                <li><Link href="/contacto" className="hover:no-underline hover:text-brand-dark">Contacto</Link></li>
               </ul>
             </div>
           </div>

@@ -33,7 +33,7 @@ export default async function Recom({ params }: { params: { slug: string } }) {
         )}
       </div>
       <div className="mt-6">
-        <Link href={`/go/${item.meta.affiliateSlug || item.slug}`} className="inline-block bg-rose-600 text-white px-4 py-2 rounded">Ver oferta</Link>
+        <Link href={`/go/${item.meta.affiliateSlug || item.slug}`} className="inline-block bg-brand text-white px-4 py-2 rounded hover:bg-brand-light hover:text-brand-dark hover:shadow-sm">Ver oferta</Link>
       </div>
     </article>
   )

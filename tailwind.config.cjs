@@ -6,7 +6,15 @@ module.exports = {
     './content/**/*.{md,mdx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        brand: {
+          DEFAULT: '#ff76a8',
+          light: '#ffdae8',
+          dark: '#ae51ca'
+        }
+      }
+    }
   },
   plugins: []
 }

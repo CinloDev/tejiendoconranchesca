@@ -32,7 +32,7 @@ export default async function Pack({ params }: { params: { slug: string } }) {
         )}
       </div>
       <div className="mt-6">
-        <a href={item.meta.hotmartUrl || '#'} className="inline-block bg-rose-600 text-white px-4 py-2 rounded">Comprar pack</a>
+        <a href={item.meta.hotmartUrl || '#'} className="inline-block bg-brand text-white px-4 py-2 rounded hover:bg-brand-light hover:text-brand-dark hover:shadow-sm">Comprar pack</a>
       </div>
     </article>
   )

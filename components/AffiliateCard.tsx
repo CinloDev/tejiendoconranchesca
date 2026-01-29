@@ -7,7 +7,7 @@ export default function AffiliateCard({ title, description, slug }: { title: str
       <h4 className="font-semibold text-sm">{title}</h4>
       {description && <p className="text-sm text-gray-600 mt-2">{description}</p>}
       <div className="mt-4">
-        <Link href={`/go/${slug}`} className="inline-block bg-rose-600 text-white px-3 py-1 rounded hover:bg-rose-700">Ver oferta</Link>
+        <Link href={`/go/${slug}`} className="inline-block bg-brand text-white px-3 py-1 rounded hover:bg-brand-light hover:text-brand-dark hover:shadow-sm">Ver oferta</Link>
       </div>
     </div>
   )

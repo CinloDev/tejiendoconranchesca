@@ -6,5 +6,50 @@ html, body {
   height: 100%;
 }
 
+:root {
+  --color-brand-1: #ff76a8;
+  --color-brand-2: #ffdae8;
+  --color-brand-3: #ae51ca;
+  accent-color: var(--color-brand-1);
+}
+
+/* Base typography and layout */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #111827;
+    background-color: #ffffff;
+  }
+
+  body {
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-brand-3);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: var(--color-brand-1);
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    color: var(--color-brand-3);
+    outline: none;
+    text-decoration: none;
+  }
+}
+
 /* Container utility */
 .container { max-width: 72rem; }
+
+@layer components {
+  .site-section {
+    @apply pt-10 px-6 sm:px-24;
+  }
+}

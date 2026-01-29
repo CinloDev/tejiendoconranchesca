@@ -1,5 +1,5 @@
 import { getItemBySlug } from '../../../../lib/content'
-import affiliateLinks from '../../../../content/affiliate-links.json'
+import affiliateLinks from '../../../content/affiliate-links.json'
 import { redirect } from 'next/navigation'
 
 interface Props { params: { slug: string } }

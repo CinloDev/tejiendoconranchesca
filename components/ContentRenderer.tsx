@@ -6,7 +6,7 @@ import React from 'react'
 const components = {
   img: (props: any) => <img {...props} className="max-w-full rounded" />,
   Image,
-  a: (props: any) => <a {...props} className="text-rose-600 hover:underline" />
+  a: (props: any) => <a {...props} className="text-brand no-underline hover:text-brand-dark" />
 }
 
 export default function ContentRenderer({ children }: { children: React.ReactNode }) {
