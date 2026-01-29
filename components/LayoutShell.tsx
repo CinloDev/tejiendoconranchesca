@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Container from './Container'
+import { SiInstagram, SiPinterest, SiYoutube, SiTiktok } from 'react-icons/si'
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -99,7 +100,27 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
             </div>
           </div>
 
-          <div className="py-4 border-t text-center text-sm text-gray-500">© {new Date().getFullYear()} Ranchesca — Hecho a mano con ❤️</div>
+          <div className="py-4 border-t">
+            <div className="flex items-center justify-center gap-6 py-3">
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-brand-dark">
+                <SiInstagram className="h-6 w-6" />
+              </a>
+
+              <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-gray-600 hover:text-brand-dark">
+                <SiPinterest className="h-6 w-6" />
+              </a>
+
+              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-600 hover:text-brand-dark">
+                <SiYoutube className="h-6 w-6" />
+              </a>
+
+              <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-600 hover:text-brand-dark">
+                <SiTiktok className="h-6 w-6" />
+              </a>
+            </div>
+
+            <div className="text-center text-sm text-gray-500">© {new Date().getFullYear()} Ranchesca — Hecho a mano con ❤️</div>
+          </div>
         </Container>
       </footer>
     </div>
